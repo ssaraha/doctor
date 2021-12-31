@@ -5,11 +5,14 @@ namespace App\Entity;
 use App\Repository\SpecialityRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+use App\Entity\Traits\Timestampable;
+
 /**
  * @ORM\Entity(repositoryClass=SpecialityRepository::class)
  */
 class Speciality
 {
+    use Timestampable;
     /**
      * @ORM\Id
      * @ORM\GeneratedValue

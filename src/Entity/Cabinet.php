@@ -5,11 +5,14 @@ namespace App\Entity;
 use App\Repository\CabinetRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+use App\Entity\Traits\Timestampable;
+
 /**
  * @ORM\Entity(repositoryClass=CabinetRepository::class)
  */
 class Cabinet
 {
+    use Timestampable;
     /**
      * @ORM\Id
      * @ORM\GeneratedValue

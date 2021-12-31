@@ -4,12 +4,14 @@ namespace App\Entity;
 
 use App\Repository\LanguagesRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Entity\Traits\Timestampable;
 
 /**
  * @ORM\Entity(repositoryClass=LanguagesRepository::class)
  */
 class Languages
 {
+    use Timestampable;
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
